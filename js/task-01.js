@@ -15,7 +15,7 @@ const titleItemSecond = secondItem.firstElementChild;
 console.log(`Category: ${titleItemSecond.textContent}`);
 const itemLengthSecond = selectItem.nextElementSibling.lastElementChild.children.length;
 console.log(`Elements: ${itemLengthSecond}`);
-console.log();
+
 
 const titleItemThird = secondItem.nextElementSibling.firstElementChild;
 console.log(`Category: ${titleItemThird.textContent}`);
