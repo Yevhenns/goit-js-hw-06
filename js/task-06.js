@@ -27,8 +27,20 @@
 const textInput = document.querySelector("#validation-input");
 console.log(textInput)
 textInput.addEventListener('blur', (event) => {
-  if (textInput.textContent.length = )
-})
+  if (event.textContent.length === 6) {
+    textInput.classList.remove("invalid");
+    textInput.classList.add("valid");
+    
+  }
+  else {
+    textInput.classList.remove("valid");
+    textInput.classList.add("invalid");
+  }
+  console.log(Number(textInput.target.textContent.length))
+});
+  
+  
+
 
 // const setFocusBtn = document.querySelector('[data-action="set"]');
 // const removeFocusBtn = document.querySelector('[data-action="remove"]');
