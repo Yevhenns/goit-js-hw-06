@@ -15,17 +15,8 @@ const images = [
 
 
 
-
-
-const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
-const list = document.querySelector(".list");
-
-const markup = technologies
-  .map((technology) => `<li class="list-item">${technology}</li>`)
-  .join("");
-
-// Check the console, you'll see a single string with HTML tags
-console.log(markup);
-
-// Adding all the markup in one operation
-list.innerHTML = markup;
+const gallery = images.map(image => {
+  const img = document.querySelector('.gallery')
+  img.insertAdjacentHTML('afterbegin', `<li class="gallery-item"> <img class="gallery-photo" src = "${image.url}" alt = "${image.alt}" width = 400>`)
+  
+})
