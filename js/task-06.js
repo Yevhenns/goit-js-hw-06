@@ -27,7 +27,7 @@
 const textInput = document.querySelector("#validation-input");
 console.log(textInput)
 textInput.addEventListener('blur', (event) => {
-  if (event.textContent.length === 6) {
+  if (Number(event.target.value.length) === 6) {
     textInput.classList.remove("invalid");
     textInput.classList.add("valid");
     
@@ -36,23 +36,5 @@ textInput.addEventListener('blur', (event) => {
     textInput.classList.remove("valid");
     textInput.classList.add("invalid");
   }
-  console.log(Number(textInput.target.textContent.length))
+  // console.log(Number(event.target.value.length))
 });
-  
-  
-
-
-// const setFocusBtn = document.querySelector('[data-action="set"]');
-// const removeFocusBtn = document.querySelector('[data-action="remove"]');
-// setFocusBtn.addEventListener("click", () => {
-//   textInput.focus();
-// });
-// removeFocusBtn.addEventListener("click", () => {
-//   textInput.blur();
-// });
-// textInput.addEventListener("focus", () => {
-//   textInput.value = "This input has focus";
-// });
-// textInput.addEventListener("blur", () => {
-//   textInput.value = "";
-// });
