@@ -29,8 +29,7 @@ console.log(textInput)
 textInput.addEventListener('blur', (event) => {
   if (Number(event.target.value.length) === 6) {
     textInput.classList.remove("invalid");
-    textInput.classList.add("valid");
-    
+    textInput.classList.add("valid");    
   }
   else {
     textInput.classList.remove("valid");
