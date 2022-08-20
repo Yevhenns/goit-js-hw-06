@@ -25,9 +25,11 @@
 // }
 
 const textInput = document.querySelector("#validation-input");
-console.log(textInput)
+const lengthInput = Number(textInput.dataset.length);
+
+// console.log(textInput)
 textInput.addEventListener('blur', (event) => {
-  if (Number(event.target.value.length) === 6) {
+  if (Number(event.target.value.length) === lengthInput) {
     textInput.classList.remove("invalid");
     textInput.classList.add("valid");    
   }
@@ -35,5 +37,6 @@ textInput.addEventListener('blur', (event) => {
     textInput.classList.remove("valid");
     textInput.classList.add("invalid");
   }
-  // console.log(Number(event.target.value.length))
+  // console.log(Number(event.target.value.length));
+  // console.log(lengthInput);
 });
