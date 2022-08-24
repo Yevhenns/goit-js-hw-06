@@ -51,8 +51,8 @@ inp.addEventListener('input', () => {
 create.addEventListener('click', () => {
   for (let i = 0; i < amount; i += 1) {
     const d = document.createElement("div");
-    d.style.width = "30px";
-    d.style.height = "30px";
+    d.style.width = `${30 + 10 * i}px`;
+    d.style.height = `${30 + 10 * i}px`;
     d.style.backgroundColor = getRandomHexColor();
     container.append(d);
 
