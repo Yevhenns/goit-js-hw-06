@@ -13,11 +13,17 @@ const images = [
   },
 ];
 
+// debugger;
 
+const galleryContainer = document.querySelector('.gallery');
+const galleryMarkup = galleyItem(images);
 
-const gallery = images.map(image => {
-  const img = document.querySelector('.gallery')
-  img.insertAdjacentHTML('afterbegin', `<li class="gallery-item"> <img class="gallery-photo"
-  src = "${image.url}" alt = "${image.alt}" width = 400>`)
-  debugger;
-})
+galleryContainer.insertAdjacentHTML('afterbegin', galleryMarkup);
+
+function galleyItem(images) {
+  return images.map(({ url, alt }) => {
+    return `
+    <li class="gallery-item"> <img class="gallery-photo"
+    src = "${url}" alt = "${alt}" width = 400> </li>`
+  }).join('')
+};

@@ -12,6 +12,6 @@ for (let i = 0; i < ingredients.length; i += 1) {
 	let ingrLi = document.createElement('li');
   ingrLi.textContent = ingredients[i];
   ingrLi.classList.add("item");
-  listItems.push(ingrLi);
+  listItems.push(ingrLi);  
 };
 list.append(...listItems);
